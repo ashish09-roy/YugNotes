@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YugNotes - Your Smart & Intuitive Note-Taking App</title>
+
+  <meta name="description" content="YugNotes: A smart, intuitive, and efficient note-taking application from YugVerse. Organize your thoughts, capture ideas, and boost your productivity. Start taking notes now!">
+  <meta name="keywords" content="YugNotes, note-taking, productivity app, notes, organize ideas, YugVerse, smart notes, digital notebook, best note app, note taking app, download notes">
+  <meta name="author" content="Ashish Roy / YugVerse">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">YugNotes <span class="logo-light">📒</span></a>
+      <nav class="main-nav">
+        <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="#app">App</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://yugverse.github.io/YugVerse.github.io/" class="btn btn-secondary small-btn">Back to YugVerse</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container hero-content fade-in">
+      <h1>👋 Hello, Notes! Meet <span class="highlight">YugNotes</span>.</h1>
+      <p class="tagline">Your intelligent companion for capturing ideas, organizing thoughts, and boosting productivity. Designed for clarity, powered by simplicity.</p>
+      <div class="button-group">
+        <a href="#app" class="btn btn-primary animate-btn">Start Taking Notes Now!</a>
+        <a href="#features" class="btn btn-secondary animate-btn">Explore Features</a>
+      </div>
+      <div class="product-mockup slide-up">
+          <img src="https://via.placeholder.com/1000x600/619af0/FFFFFF?text=YugNotes+App+Screenshot" alt="YugNotes App Screenshot">
+      </div>
+    </div>
+  </section>
+
+  <section id="app" class="yugnotes-app-section">
+    <div class="container app-container">
+        <h2 class="section-title slide-up">Your Digital Notebook</h2>
+        <div class="note-input-area scale-in">
+            <input type="text" id="note-title" placeholder="Note Title" maxlength="100">
+            <textarea id="note-content" placeholder="Start writing your note here..."></textarea>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button id="save-note-btn" class="btn btn-primary">Save Note</button>
+                <button id="update-note-btn" class="btn btn-primary" style="display:none;">Update Note</button>
+                <button id="cancel-edit-btn" class="btn btn-secondary" style="display:none;">Cancel Edit</button>
+            </div>
+        </div>
+
+        <div class="note-list-area slide-up">
+            <h3>Your Saved Notes</h3>
+            <div id="notes-container" class="notes-grid">
+                <p id="no-notes-message" style="text-align: center; color: #777; margin-top: 20px;">No notes yet. Start by writing one above!</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <div id="preview-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 id="preview-title"></h2>
+      <div id="preview-content"></div>
+    </div>
+  </div>
+
+  <section id="features" class="features-section">
+    <div class="container">
+      <h2 class="section-title slide-up">Why YugNotes is Your Perfect Partner</h2>
+      <div class="features-grid">
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-pen-nib"></i></div>
+          <h3>Rich Text Editing</h3>
+          <p>Format your notes with bold, italics, lists, and more. Make your ideas stand out and easy to read with advanced formatting tools.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-tags"></i></div>
+          <h3>Smart Tagging & Filtering</h3>
+          <p>Go beyond folders. Tag your notes with keywords for instant recall and powerful search capabilities.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Seamless Sync (Upcoming)</h3>
+          <p>Access your notes anywhere, anytime. YugNotes seamlessly syncs across all your devices, ensuring your ideas are always with you.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-lock"></i></div>
+          <h3>Privacy-First Design</h3>
+          <p>Your notes are personal. We prioritize your privacy with robust security measures, keeping your valuable information safe and confidential.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-cloud-arrow-up"></i></div>
+          <h3>Reliable Cloud Backup (Upcoming)</h3>
+          <p>Never lose a single note. YugNotes offers automatic cloud backup, ensuring your important data is always secure and recoverable.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-history"></i></div>
+          <h3>Version History</h3>
+          <p>Access previous versions of your notes. Revert to earlier drafts and track changes with ease, so no idea is ever lost.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-share-alt"></i></div>
+          <h3>Collaborate with Ease (Upcoming)</h3>
+          <p>Share notes with teammates or friends and work together in real-time. Boost your team's productivity and shared understanding.</p>
+        </div>
+        <div class="feature-item scale-in">
+          <div class="icon"><i class="fas fa-code"></i></div>
+          <h3>Markdown Support</h3>
+          <p>Write faster and more efficiently with full Markdown support for quick, professional formatting of text and code.</p>
+        </div>
+        <div class="feature-item scale-in">
+            <div class="icon"><i class="fas fa-wifi"></i></div>
+            <h3>Offline Mode</h3>
+            <p>Access and edit your notes even without an internet connection. Stay productive, wherever you are, seamlessly syncing when back online.</p>
+        </div>
+        <div class="feature-item scale-in">
+            <div class="icon"><i class="fas fa-file-alt"></i></div>
+            <h3>Templates (Future)</h3>
+            <p>Kickstart your notes with pre-designed templates for every occasion, from meeting minutes to daily journals. Focus on your content, not the format.</p>
+        </div>
+        <div class="feature-item scale-in">
+            <div class="icon"><i class="fas fa-magic"></i></div>
+            <h3>AI-Powered Insights (Future)</h3>
+            <p>Get intelligent suggestions, summaries, and action items from your notes. YugNotes evolves with you, making your notes even smarter and more actionable.</p>
+        </div>
+        <div class="feature-item scale-in">
+            <div class="icon"><i class="fas fa-brain"></i></div>
+            <h3>Intuitive Interface</h3>
+            <p>A clean, distraction-free design that allows you to focus purely on your thoughts. Simple navigation for seamless note-taking, making productivity effortless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title slide-up">What People Are Saying (Soon!)</h2>
+      <div class="testimonial-card scale-in">
+        <p>"YugNotes looks incredibly promising! The design is so clean, and I can't wait to try its smart organization features."</p>
+        <h4>- Early Beta Tester</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <h2 class="section-title slide-up">Frequently Asked Questions</h2>
+      <div class="faq-item fade-in">
+        <h3>Is YugNotes free to use?</h3>
+        <p>YugNotes will always offer a free tier with core features. Premium functionalities like cloud sync and AI integrations will be part of a future subscription. Detailed pricing will be announced with those features.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h3>Which platforms will YugNotes be available on?</h3>
+        <p>Initially, YugNotes is a web application accessible via any modern browser. We plan to expand to mobile (iOS/Android) and desktop platforms in subsequent updates.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h3>How does YugNotes ensure my privacy?</h3>
+        <p>We are committed to data privacy. YugNotes (currently using browser's Local Storage) employs robust encryption and security protocols for any future cloud-based services to protect your notes and personal information. Refer to our detailed Privacy Policy for more information.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title slide-up">Get in Touch</h2>
+      <p class="fade-in" style="text-align: center; margin-bottom: 40px;">Have questions or want to partner with us? Reach out!</p>
+      <div class="contact-form-container scale-in">
+        <form action="#" method="POST" class="contact-form">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject">
+
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>YugNotes</h3>
+        <p>A Product of YugVerse</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect With YugVerse</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 YugNotes (A YugVerse Product). All rights reserved. | Made with ❤️ in India</p>
+      <p><strong>ALL COPYRIGHT RESERVED WITH YUGVERSE</strong></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.10/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
